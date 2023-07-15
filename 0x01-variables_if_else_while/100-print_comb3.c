@@ -5,26 +5,28 @@
 /**
  * main - Entry point
  *
- * Description: print alphabets in Lowercase and Uppercase
+ * Description: unique combination of two digits
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-int i;
+int i, j;
 i = 0;
-for (; i <= 9; i++)
+for (; i < 10; i++)
+{
+j = i + 1;
+for (; j < 10; j++)
 {
 putchar(i + '0');
-if (i != 9)
+putchar(j + '0');
+if (i != 8 || j != 9)
 {
 putchar(',');
 putchar(' ');
 }
-else
-{
+}
+}
 putchar('\n');
-}
-}
 return (0);
 }
