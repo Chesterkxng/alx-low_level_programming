@@ -1,20 +1,20 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/**
- * main - generates a random number
- * print the sign (positive, negative, or zero)
- *
- * return : Always 0 (success)
- *
- */
 
+/**
+ * main - Entry point
+ *
+ * Description: generate a random number and
+ *	statuate about his sign
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-/* your code goes there */
 if (n > 0)
 {
 printf("%d is positive\n", n);
