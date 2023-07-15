@@ -1,9 +1,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
+/**
+ * main - generates a random number
+ * print the sign (positive, negative, or zero)
+ *
+ * return : Always 0 (success)
+ *
+ */
 
-/* betty style doc for function main goes there */
 int main(void)
 {
 int n;
