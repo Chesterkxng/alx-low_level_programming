@@ -6,3 +6,5 @@
 : This programm will print the alphabet in lowercase
 3-print-alphabets
 : This program will print the alphabet in lowercase, then in UPPERCASE
+4-print-alphabt
+: This program will print the alphabet in lowercase, execept 2 charaters
