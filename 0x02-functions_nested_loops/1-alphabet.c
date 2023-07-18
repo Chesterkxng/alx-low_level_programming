@@ -14,12 +14,10 @@ void print_alphabet(void)
 
 	a = 'a';
 
-
 	for (a; a <= 'z'; a++)
 	{
 		_putchar(a);
 	}
 	_putchar('\n');
-	return;
 
 }
