@@ -1,51 +1,53 @@
 #include "main.h"
+void two_digits(int n);
+
 /**
- *times_table - Entry point
- * Description:  a program that prints the 9 times table
- *
- *
+ * times_table - Write a function that prints the last digit of a number.
  *
  * Return: void
  */
+
 void times_table(void)
 {
-	int i;
-	i = 0;
-
-	while (i <= 9)
+	int i, j, r;
+	for (i = 0; i < 10; i++)
 	{
-		int j;
-		j = 0;
-
-		while (j <= 9)
+		for (j = 0; j < 10; j++)
 		{
-			int time_result;
-			int d;
-			int u;
-
-			time_result = i * j;
-
-			d = time_result / 10;
-
-			u = time_result % 10;
-
-			if (d != 0)
+			r = i * j;
+			if (r < 10 && j != 0)
 			{
-				_putchar(d + '0');
+				_putchar(' ');
+				_putchar('0' + r);
+			}
+			else if (j == 0)
+			{
+				_putchar('0' + r);
 			}
 			else
 			{
-				_putchar(' ');
+				two_digits(r);
 			}
-			_putchar(u + '0');
 			if (j != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
-	     		j++;
 		}
 		_putchar('\n');
-		i++;
 	}
+}
+/**
+ * two_digits - function
+ * @n: The number.
+ * Retur : digits of number
+ */
+
+void two_digits(int n)
+{
+	int r1, r2;
+	r1 = n % 10;
+	r2 = (n - r1) / 10;
+	_putchar('0' + r2);
+	_putchar('0' + r1);
 }
