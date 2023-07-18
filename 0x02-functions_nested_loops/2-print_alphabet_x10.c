@@ -1,5 +1,4 @@
-#include <main.h>
-
+#include "main.h"
 /**
  * print_alphabet - Entry point
  * Description:  a program that print 10 times
@@ -18,14 +17,14 @@ void print_alphabet(void)
 
 	i = 0;
 
-	for (i; i < 10; i++)
+	while (i < 10)
 	{
 		for (a; a <= 'z'; a++)
 		{
 			_putchar(a);
 		}
 		_putchar('\n');
+		i++;
 	}
-	return (0);
 
 }
