@@ -22,12 +22,11 @@ void times_table(void)
 		while (j <= 9)
 		{
 			int time_result;
+			int d;
+			int u;
 
 			time_result = i * j;
 
-			int d;
-
-			int u;
 			d = time_result / 10;
 
 			u = time_result % 10;
