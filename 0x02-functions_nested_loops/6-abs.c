@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  * _abs - Entry point
- * Description:  return the absolute value of a given int 
+ * Description:  return the absolute value of a given int
  *
- * @c: character(int) to be checked
+ * @n: character(int) to be checked
  *
  * Return: 0 (is lowercase)
  *         1 (otherwise)
