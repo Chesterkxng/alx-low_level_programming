@@ -25,8 +25,18 @@ void times_table(void)
 
 			time_result = i * j;
 
-			_putchar(time_result / 10 + '0');
-			_putchar(time_result % 10 + '0');
+			int d;
+
+			int u;
+			d = time_result / 10;
+
+			u = time_result % 10;
+
+			if (d != 0)
+			{
+			_putchar(d + '0');
+			}
+			_putchar(u + '0');
 
 			if (j != 9)
 			{
