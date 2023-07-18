@@ -48,8 +48,11 @@ void times_table(void)
 void two_digits(int n)
 {
 	int r1, r2;
+
 	r1 = n % 10;
+
 	r2 = (n - r1) / 10;
+
 	_putchar('0' + r2);
 	_putchar('0' + r1);
 }
