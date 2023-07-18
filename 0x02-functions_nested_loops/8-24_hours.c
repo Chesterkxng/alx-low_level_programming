@@ -1,11 +1,9 @@
 #include "main.h"
 /**
- * print_last_digit - Entry point
- * Description:  return the last digit of a given int
+ * jack_bauer - Entry point
+ * Description:  jack baueur
  *
- * @n: character(int) to be checked
- *
- * Return: the value of the last digit
+ * Return: void
  */
 
 void jack_bauer(void)
@@ -14,9 +12,9 @@ void jack_bauer(void)
 
 	i, j = 0;
 
-	for (i; i <= 23; i++)
+	while (i <= 23)
 	{
-		for (j; j <=59; j++)
+		while (j <=59)
 		{
 			_putchar(j % 10 + '0');
 			_putchar(j / 10 + '0');
@@ -24,7 +22,9 @@ void jack_bauer(void)
 			_putchar(i % 10 + '0');
 			_putchar(i / 10 + '0');
 			_putchar('\n');
+			j++;
 		}
+		i++;
 	}
 
 }
