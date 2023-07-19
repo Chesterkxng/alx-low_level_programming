@@ -16,7 +16,7 @@ int print_sum(int n)
 
 	sum = 0;
 
-	for (i = 1; i < 1024; i++)
+	for (i = 1; i < n, i < 1024; i++)
 	{
 		j = is_divide(i);
 		if (j == 1)
