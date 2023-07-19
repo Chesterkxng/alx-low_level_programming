@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_times_table - Write a function that prints times table from 0 to 15.
@@ -18,7 +19,7 @@ void print_times_table(int n)
 			for (j = 0; j <= n; j++)
 			{
 				int res;
-				
+
 				res = i * j;
 
 				if (j != n)
