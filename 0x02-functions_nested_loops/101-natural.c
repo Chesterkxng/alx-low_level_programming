@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 void print_divider_3_5(void);
 
 /**
