@@ -1,4 +1,5 @@
 #include "main.h"
+void print_digits(int n);
 
 /**
  * print_to_98- Write a function print all the number from the given
