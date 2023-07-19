@@ -38,11 +38,10 @@ void print_times_table(int n)
 				}
 				else
 				{
-					printf("%d", res);
+					printf("%d\n", res);
 				}
 			}
 		}
-		printf("\n");
 	}
 	else
 	{
