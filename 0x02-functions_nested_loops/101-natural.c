@@ -1,47 +1,37 @@
 #include "main.h"
 
-int is_divide(int n);
+void print_divider_3_5(void);
 
 /**
  * print_sum - a program that print the sum of all (3 or 5)
  * multiples less than input.
  *
- * @n : input integer
- * Return: the sum
+ * Return: 0 (Success)
  */
 
-int print_sum(int n)
+int print_sum(void)
 {
-	int i, j, sum;
-
-	sum = 0;
-
-	for (i = 1; i < n; i++)
-	{
-		j = is_divide(i);
-		if (j == 1 && i < 1024)
-		{
-			sum = sum + j;
-		}
-	}
-	return (sum);
+      	print_divider_3_5();
+	return (0);
 }
 
 /**
- * is_divide - a program that tells that if the integer
+ * print_divider_3_5 - a program that print the waited result
  * is a 3 or 5 multiple
- * @n : input integer
- * Return : 1 (if multiple)
- *          0 (if not)
+ * Return : void
  */
-int is_divide(int n)
+void print_divider_3_5(void)
 {
-	if (n % 3 || n % 5)
+	int i, sum;
+
+	sum = 0;
+
+	for (i = 0; i < 1024; i++)
 	{
-		return (1);
+		if (i % 3 || i % 5)
+		{
+			sum = sum + i;
+		}
 	}
-	else
-	{
-		return (0);
-	}
+	printf("%d\n", sum);
 }
