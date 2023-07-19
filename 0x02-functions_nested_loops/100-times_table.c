@@ -21,7 +21,7 @@ void print_times_table(int n)
 			printf("0,");
 			for (j = 0; j <= n; j++)
 			{
-				int res;
+				int res, digits;
 
 				res = i * j;
 
@@ -59,13 +59,17 @@ void print_times_table(int n)
 
 int number_of_digits(int n)
 {
-	int count;
+	int k, count;
+
+	k = n;
+
 	count = 0;
+
 	do
 	{
-		n / 10;
+		k / 10;
 		count++;
 	}
-	while (n != 0);
+	while (k != 0);
 	return (count);
 }
