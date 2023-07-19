@@ -19,7 +19,7 @@ void print_times_table(int n)
 		for (i = 0; i <= n; i++)
 		{
 			printf("0,");
-			for (j = 0; j <= n; j++)
+			for (j = 1; j <= n; j++)
 			{
 				int res, digits;
 
@@ -65,11 +65,9 @@ int number_of_digits(int n)
 
 	count = 0;
 
-	do
-	{
+	do {
 		k /= 10;
 		count++;
-	}
-	while (k != 0);
+	} while (k != 0);
 	return (count);
 }
