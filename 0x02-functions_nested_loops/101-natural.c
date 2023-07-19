@@ -9,7 +9,7 @@ void print_divider_3_5(void);
  * Return: 0 (Success)
  */
 
-int print_sum(void)
+int main(void)
 {
       	print_divider_3_5();
 	return (0);
