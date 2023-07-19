@@ -67,7 +67,7 @@ int number_of_digits(int n)
 
 	do
 	{
-		k / 10;
+		k /= 10;
 		count++;
 	}
 	while (k != 0);
