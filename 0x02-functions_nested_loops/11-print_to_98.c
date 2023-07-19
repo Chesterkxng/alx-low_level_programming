@@ -54,7 +54,7 @@ void print_digits(int n)
 	}
 	if (n / 10)
 	{
-		print_digits(n /10);
+		print_digits(n / 10);
 		_putchar(n % 10 + '0');
 	}
 }
