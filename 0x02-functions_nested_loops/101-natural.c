@@ -3,7 +3,7 @@
 void print_divider_3_5(void);
 
 /**
- * print_sum - a program that print the sum of all (3 or 5)
+ * main - a program that print the sum of all (3 or 5)
  * multiples less than input.
  *
  * Return: 0 (Success)
@@ -11,7 +11,7 @@ void print_divider_3_5(void);
 
 int main(void)
 {
-   	print_divider_3_5();
+	print_divider_3_5();
 	return (0);
 }
 
