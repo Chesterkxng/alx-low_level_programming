@@ -17,7 +17,7 @@ void print_to_98(int n)
 	{
 		for (i = n; i >= 98; i--)
 		{
-			print_digits(i);
+			printf("%d", i);
 			if (i != 98)
 			{
 				_putchar(',');
@@ -29,7 +29,7 @@ void print_to_98(int n)
 	{
 		for (i = n; i <= 98; i++)
 		{
-			print_digits(i);
+			printf("%d", i);
 			if (i != 98)
 			{
 				_putchar(',');
@@ -38,24 +38,4 @@ void print_to_98(int n)
 		}
 	}
 	_putchar('\n');
-}
-/**
- * print_digits - print digits of the given number
- * @n : integer
- * Return : void
- *
- */
-void print_digits(int n)
-{
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
-	if (n / 10)
-	{
-		_putchar(n % 10 + '0');
-		print_digits(n / 10);
-
-	}
 }
