@@ -27,7 +27,7 @@ void print_times_table(int n)
 
 				digits = number_of_digits(res);
 
-				for (k = 0; k <= (4 - digits); k++)
+				for (k = 0; k < (4 - digits); k++)
 				{
 					printf(" ");
 				}
@@ -51,7 +51,6 @@ void print_times_table(int n)
 }
 
 /**
- *
  * number_of_digits - count the number of digit of an integer
  * @n: input integer
  * Return: the number of digit of the input
