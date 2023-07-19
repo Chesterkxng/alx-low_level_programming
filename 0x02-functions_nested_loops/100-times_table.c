@@ -38,7 +38,7 @@ void print_times_table(int n)
 				}
 				else
 				{
-					printf("%d\n", res);
+					printf("%d", res);
 				}
 			}
 		}
