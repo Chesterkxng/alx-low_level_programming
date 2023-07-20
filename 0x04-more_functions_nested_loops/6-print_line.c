@@ -5,7 +5,7 @@
  * print_line - Entry point
  * Description:  a program that print n times the underscore
  * characters
- * @n : input integer
+ * @n input integer
  *
  */
 void print_line(int n)
