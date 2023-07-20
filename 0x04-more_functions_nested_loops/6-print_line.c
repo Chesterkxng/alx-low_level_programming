@@ -7,7 +7,6 @@
  * characters
  * @n : input integer
  *
- * Return: void
  */
 void print_line(int n)
 {
