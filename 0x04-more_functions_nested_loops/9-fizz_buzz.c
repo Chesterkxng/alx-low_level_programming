@@ -1,11 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 
+void fizz_buzz(void);
 /**
  * main - check the code
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
 	fizz_buzz();
