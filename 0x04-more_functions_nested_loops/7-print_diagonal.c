@@ -11,7 +11,20 @@ void diagonal(int n);
  */
 void print_diagonal(int n)
 {
-	diagonal(n);
+	int j;
+
+	if (n > 0)
+	{
+		for (j = 1; j <= n; j++)
+		{
+			diagonal(j);
+			_putchar('\n');
+		}
+	}
+	else
+	{
+		_putchar('\n');
+	}
 }
 
 /**
@@ -22,25 +35,11 @@ void print_diagonal(int n)
  */
 void diagonal(int n)
 {
-	int i;
+	int k;
 
-	if (n > 0)
+	for (k = n; k >= 0; k--)
 	{
-
-		for (i = 1 ; i <= n; i++)
-		{
-			int k;
-
-			for (k = i; k >= 0; k--)
-			{
-				_putchar(' ');
-			}
-			_putchar('\\');
-			_putchar('\n');
-		}
+		_putchar(' ');
 	}
-	else
-	{
-		_putchar('\n');
-	}
+	_putchar(92);
 }
