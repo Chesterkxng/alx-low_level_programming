@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * _isupper - Entry point
- * Description:  a program that statuate if the character is uppercase or no
+ * mul - Entry point
+ * Description:  a program that return the product of 2 input integers
  * @a : first input integer
  * @b : second input integer
  * Return: the product
