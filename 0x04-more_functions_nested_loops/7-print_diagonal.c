@@ -24,15 +24,23 @@ void diagonal(int n)
 {
 	int i;
 
-	for (i = 0 ; i <= n; i++)
+	if (n > 0)
 	{
-		int k;
 
-		for (k = i; k > 0; k--)
+		for (i = 1 ; i <= n; i++)
 		{
-			_putchar(' ');
+			int k;
+
+			for (k = i; k > 0; k--)
+			{
+				_putchar(' ');
+			}
+			_putchar('\\');
+			_putchar('\n');
 		}
-		_putchar('\\');
+	}
+	else
+	{
 		_putchar('\n');
 	}
 }
