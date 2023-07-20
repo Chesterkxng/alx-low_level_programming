@@ -20,16 +20,14 @@ int main(void)
  *
  * Return: void
  */
-
 void fizz_buzz(void)
 {
 	int i;
-
 	for (i = 1; i <= 100; i++)
 	{
-		if ((i % 3 == 0) || (i % 5 == 0))
+		if (i % 3 == 0 || i % 5 == 0)
 		{
-			if ((i % 3 == 0) && (i % 5 == 0))
+			if (i % 3 == 0 && i % 5 == 0)
 			{
 				printf("FizzBuzz");
 			}
@@ -48,11 +46,11 @@ void fizz_buzz(void)
 		}
 		if (i != 100)
 		{
-			printf(' ');
+			printf(" ");
 		}
 		else
 		{
-			printf('\n');
+			printf("\n");
 		}
 	}
 }
