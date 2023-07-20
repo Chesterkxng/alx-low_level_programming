@@ -11,32 +11,21 @@ void diagonal(int n);
  */
 void print_diagonal(int n)
 {
-	int j;
+	int i;
 
-	for (j = 0; j <= n; j++)
+	for (i = 0; i < n; i++)
 	{
-		diagonal(j);
+		int j;
+
+		for (j = 0; j < i; ++j)
+		{
+			_putchar(' ');
+		}
+		_putchar('\\');
 		_putchar('\n');
 	}
 	if (n <= 0)
 	{
 		_putchar('\n');
 	}
-}
-
-/**
- * diagonal - Entry point
- * Description: a program that display the desired diagonal
- * @n: input
- * Return: void
- */
-void diagonal(int n)
-{
-	int k;
-
-	for (k = 0; k < n; ++k)
-	{
-		_putchar(' ');
-	}
-	_putchar(92);
 }
