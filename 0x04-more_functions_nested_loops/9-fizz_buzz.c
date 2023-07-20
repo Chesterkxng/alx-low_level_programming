@@ -2,11 +2,23 @@
 #include <stdio.h>
 
 /**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	fizz_buzz();
+	return (0);
+}
+
+/**
  * fizz_buzz - Entry point
  * Description: fizz buzz
  *
  * Return: void
  */
+
 void fizz_buzz(void)
 {
 	int i;
@@ -20,7 +32,7 @@ void fizz_buzz(void)
 		{
 			printf("Buzz");
 		}
-		else if (i % 5 == 0 && i % 3 == 0)
+		else if ((i % 5 == 0) && (i % 3 == 0))
 		{
 			printf("FizzBuzz");
 		}
