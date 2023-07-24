@@ -5,7 +5,7 @@
  * reset_to_98 - Entry point
  * Description:  a program that take a pointer
  * to an int as parameter and update the value
- *
+ * @n: integer to reset
  *
  * Return: void
  */
