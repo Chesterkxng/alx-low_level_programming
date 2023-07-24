@@ -21,6 +21,7 @@ void print_rev(char *s)
 		length--;
 		if (length == 0)
 		{
+			_putchr(s[0]);
 			_putchar('\n');
 		}
 	}
