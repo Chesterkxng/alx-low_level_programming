@@ -6,7 +6,7 @@
  * Description:  a program that return the length of a given
  * char
  * @s: given char
- * Return: void
+ * Return: the number of characters
  */
 int _strlen(char *s)
 {
