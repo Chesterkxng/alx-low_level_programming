@@ -4,3 +4,4 @@ This repository is used for pushing files necessary to validate the courses:
 - 0x02. C - Functions nested loops
 - 0x03. C - Debugging
 - 0x04. C - More function nested loops
+- 0X05. C - Pointers, array and strings
