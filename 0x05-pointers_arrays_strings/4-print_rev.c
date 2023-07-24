@@ -22,9 +22,9 @@ void print_rev(char *s)
 		if (length == 0)
 		{
 			_putchar(s[0]);
-			_putchar('\n');
 		}
 	}
+	_putchar('\n');
 }
 
 /**
