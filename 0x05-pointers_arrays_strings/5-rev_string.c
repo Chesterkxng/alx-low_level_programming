@@ -2,44 +2,31 @@
 #include <stdio.h>
 
 int _strlen(char *s);
-void print_rev(char *s);
-void _puts(char *str);
-
 /**
- * rev_string - a function that print a string and its reverse.
- * @s : String
- * Return: void.
- */
-void rev_string(char *s)
-{
-	_puts(s);
-	print_rev(s);
-}
-
-
-/**
- * print_rev - Entry point
- * Description:  a program that reverse print a
+ * rev_string - Entry point
+ * Description:  a program that return a reverse screen
  * string
  * @s: given string
  * Return: the reverse sting
  */
-void print_rev(char *s)
+void rev_string(char *s)
 {
-	int length;
+	int i, j;
 
-	length = _strlen(s) - 1;
+	char c;
 
-	while (length  > 0)
+	i = 0;
+
+	j = _strlen(s) - 1;
+
+	while (i < j)
 	{
-		_putchar(s[length]);
-		length--;
-		if (length == 0)
-		{
-			_putchar(s[0]);
-		}
+		c = *(s + i);
+		*(s + i) = *(s + j);
+		*(s + j) = c;
+		i++;
+		j--;
 	}
-	_putchar('\n');
 }
 
 /**
@@ -60,22 +47,4 @@ int _strlen(char *s)
 		count++;
 	}
 	return (count);
-}
-/**
- * _puts - a function that print a string.
- * @str : String
- * Return: void.
- */
-void _puts(char *str)
-{
-	int i;
-
-	i = 0;
-
-	while (str[i] != '\0')
-	{
-		_putchar(str[i]);
-		i++;
-	}
-	_putchar('\n');
 }
