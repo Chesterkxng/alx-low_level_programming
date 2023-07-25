@@ -19,7 +19,7 @@ void puts2(char *str)
 
 	while(i <= length)
 	{
-		_putchar(str[length]);
+		_putchar(str[i]);
 		i = i + 2;
 	}
 }
