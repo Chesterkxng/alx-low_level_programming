@@ -3,13 +3,13 @@
 
 int _strlen(char *s);
 /**
- * _strncpy(char *dest, char *src, int n) - Entry point.
+ * *_strncpy - Entry point.
  * Description: a function that concatenates two strings
  * @dest : destination
  * @src : source
  * @n : integer
  *
- * Return: void.
+ * Return: the desired output.
  */
 char *_strncpy(char *dest, char *src, int n)
 {
