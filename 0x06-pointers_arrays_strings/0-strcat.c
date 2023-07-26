@@ -8,7 +8,7 @@ int _strlen(char *s);
  * @dest : destination
  * @src : source
  *
- * Return: void.
+ * Return: the concatenated dest.
  */
 char *_strcat(char *dest, char *src)
 {
