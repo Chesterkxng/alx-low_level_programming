@@ -3,7 +3,7 @@
 
 int _strlen(char *s);
 /**
- * *_strcat(char *dest, char *src) - Entry point.
+ * *_strcat - Entry point.
  * Description: a function that concatenates two strings
  * @dest : destination
  * @src : source
