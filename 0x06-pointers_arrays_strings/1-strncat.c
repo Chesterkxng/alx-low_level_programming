@@ -3,13 +3,13 @@
 
 int _strlen(char *s);
 /**
- * _strncat(char *dest, char *src, int n) - Entry point.
+ * *_strncat - Entry point.
  * Description: a function that concatenates two strings
  * @dest : destination
  * @src : source
  * @n : integer
  *
- * Return: void.
+ * Return: the desired dest.
  */
 char *_strncat(char *dest, char *src, int n)
 {
