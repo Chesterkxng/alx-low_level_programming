@@ -3,30 +3,30 @@
 
 int _strlen(char *s);
 /**
- * *_strcat(char *dest, char *src) - Entry point.
+ * _strncpy(char *dest, char *src, int n) - Entry point.
  * Description: a function that concatenates two strings
  * @dest : destination
  * @src : source
+ * @n : integer
  *
  * Return: void.
  */
-char *_strcat(char *dest, char *src)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int i, j, k;
+	int i;
 
-	k = 0;
+	i = 0;
 
-	i = _strlen(dest);
-
-	j = _strlen(src);
-
-	while (k <= j)
+	while (src[i] != '\0' && i < n)
 	{
-		dest[i + k] = src[k];
-		k++;
+		dest[i] = src[i];
+		i++;
 	}
-	dest[i + k] = '\0';
-
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
 /**
