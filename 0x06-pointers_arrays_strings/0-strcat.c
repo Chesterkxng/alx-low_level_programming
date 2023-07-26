@@ -1,15 +1,16 @@
 #include "main.h"
 #include <stdio.h>
 
+int _strlen(char *s);
 /**
- * _strncat(char *dest, char *src, int n) - Entry point.
+ * _strcat(char *dest, char *src) - Entry point.
  * Description: a function that concatenates two strings
  * @dest : destination
  * @src : source
- * @n: number of Bytes
+ *
  * Return: void.
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strcat(char *dest, char *src)
 {
 	int i, j, k;
 
