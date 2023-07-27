@@ -9,7 +9,7 @@
  */
 void print_number(int n)
 {
-	if (n >= -32767 && n <= 32767)
+	if ((n >= -32767 && n <= 32767) && sizeof(n) == 4)
 	{
 		if (n < 0)
 		{
