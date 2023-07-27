@@ -9,7 +9,7 @@
  */
 void print_number(int n)
 {
-	if (sizeof(n) <= 8)
+	if (sizeof(n) == sizeof(int))
 	{
 		if (n < 0)
 		{
