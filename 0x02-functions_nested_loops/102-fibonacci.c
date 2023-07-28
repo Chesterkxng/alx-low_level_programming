@@ -21,7 +21,7 @@ int main(void)
 
 void fibonacci(void)
 {
-	long int fib1, fib2, sum;
+	int fib1, fib2, sum;
 
 	int i;
 
