@@ -21,26 +21,40 @@ int main(void)
 
 void fibonacci(void)
 {
-	int fib1, fib2, sum;
-
+	long int fib1, fib2, fib3;
 	int i;
 
-	fib1 = 0;
-
-	fib2 = 1;
-
-	printf("%d, ", fib1);
-	printf("%d, ", fib2);
+	fib1 = 1;
+	fib2 = 2;
+	print_digits(fib1);
+	_putchar(',');
+	_putchar(' ');
+	print_digits(fib2);
 	i = 2;
-
 	while (i < 50)
 	{
-		sum =  fib1 + fib2;
-
-		printf("%d, ", sum);
-		fib2 = sum;
+		fib3 = fib1 + fib2;
+		_putchar(',');
+		_putchar(' ');
+		print_digits(fib3);
 		fib1 = fib2;
+		fib2 = fib3;
 		i++;
 	}
-	printf("\n");
+	_putchar('\n');
+}
+
+/**
+ * print_digits - function prints the digits of an integer.
+ * @n: The number.
+ * Return: void
+ */
+
+void print_digits(long int n)
+{
+	if (n / 10)
+	{
+		print_digits(n / 10);
+	}
+	_putchar('0' + n % 10);
 }
