@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 
+void print_digits(long int n);
 /**
  * main - check the code.
  *
