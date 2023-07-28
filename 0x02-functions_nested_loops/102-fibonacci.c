@@ -13,7 +13,7 @@ int main(void)
 	return (0);
 }
 /**
- * fibonacci Entry point.
+ * fibonacci - Entry point.
  * Description: a function that prints the fibonnaci
  * Numbers n=50
  *
