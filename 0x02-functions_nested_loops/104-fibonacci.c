@@ -32,7 +32,7 @@ void fibonacci_98(void)
 	_putchar(' ');
 	print_digits(fib2);
 	i = 2;
-	while (i < 98)
+	while (i < 96)
 	{
 		fib3 = fib1 + fib2;
 		_putchar(',');
