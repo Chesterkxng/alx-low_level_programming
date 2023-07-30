@@ -32,12 +32,10 @@ void fibonacci_98(void)
 	_putchar(' ');
 	print_digits(fib2);
 	i = 2;
-	while (i < 96)
+	while (i < 98)
 	{
 		fib3 = fib1 + fib2;
-		_putchar(',');
-		_putchar(' ');
-		print_digits(fib3);
+		printf(", %lu", fib3);
 		fib1 = fib2;
 		fib2 = fib3;
 		i++;
@@ -53,16 +51,9 @@ void fibonacci_98(void)
 
 void print_digits(long int n)
 {
-	if (n / 10)
+	if (n / 10 > 0)
 	{
 		print_digits(n / 10);
 	}
-	if (n % 10 > 0)
-	{
-		_putchar('0' + n % 10);
-	}
-	else
-	{
-		_putchar('0' + (-(n % 10)));
-	}
+	_putchar('0' + n % 10);
 }
