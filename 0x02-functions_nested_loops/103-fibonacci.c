@@ -39,6 +39,7 @@ void fibonacci_even(void)
 		}
 	}
 	print_digits(sum);
+	_putchar('\n');
 }
 
 /**
