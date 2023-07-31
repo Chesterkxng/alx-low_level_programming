@@ -16,13 +16,17 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
 
+	char *address = dest;
+
 	i = 0;
 
 
-	while (i <= n)
+	while (i < n)
 	{
-		*(dest + i) = src[i];
+		*dest = *src;
+		dest++;
+		src++;
 		i++;
 	}
-	return (dest);
+	return (address);
 }
