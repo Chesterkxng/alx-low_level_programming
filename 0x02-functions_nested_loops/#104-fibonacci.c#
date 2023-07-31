@@ -22,11 +22,11 @@ int main(void)
 
 void fibonacci_98(void)
 {
-	char fib1[50];
-	char fib2[50];
+	char fib1[];
+	char fib2[];
 
-	fib1 = {'1'};
-	fib2 = {'2'};
+	fib1[] = "1";
+	fib2[] = "2";
 
 	printf("1, 2");
 	i = 2;
