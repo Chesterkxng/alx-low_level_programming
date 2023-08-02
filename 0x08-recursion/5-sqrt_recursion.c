@@ -38,7 +38,7 @@ int guesser(int guess, int n)
 {
 	if (guess * guess - n == 0)
 	{
-		return guess;
+		return (guess);
 	}
 	else if (guess != 1 && guess * guess - n < 0)
 	{
