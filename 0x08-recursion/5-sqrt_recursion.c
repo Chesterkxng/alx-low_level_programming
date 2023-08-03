@@ -40,7 +40,7 @@ int guesser(int guess, int n)
 	{
 		return (guess);
 	}
-	else if (guess == n/2)
+	else if (guess == n / 2)
 	{
 		return (-1);
 	}
