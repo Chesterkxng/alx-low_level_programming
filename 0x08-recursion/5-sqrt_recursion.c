@@ -40,9 +40,9 @@ int guesser(int guess, int n)
 	{
 		return (guess);
 	}
-	else if (guess != 1 && guess * guess - n < 0)
+	else if (guess == n/2)
 	{
 		return (-1);
 	}
-	return (guesser((n / guess + guess) / 2, n));
+	return (guesser(++guess, n));
 }
