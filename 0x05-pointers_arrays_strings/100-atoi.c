@@ -10,6 +10,7 @@
 int _atoi(char *s)
 {
 	int i, k, num, j;
+
 	i = 0;
 	k = 0;
 	num = 0;
@@ -24,11 +25,11 @@ int _atoi(char *s)
 		{
 			if (k % 2 == 0)
 			{
-				num = num * 10 + (*(s + i) -48);
+				num = num * 10 + (*(s + i) - 48);
 			}
 			else
 			{
-				num = num * 10 - (*(s + i) -48);
+				num = num * 10 - (*(s + i) - 48);
 			}
 			j = i;
 		}
