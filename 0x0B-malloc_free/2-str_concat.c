@@ -22,6 +22,10 @@ char *str_concat(char *s1, char *s2)
 
 	j = 0;
 
+	n1 = 0;
+
+	n2 = 0;
+
 	if (s1 != NULL)
 	{
 		n1 = _strlen(s1);
