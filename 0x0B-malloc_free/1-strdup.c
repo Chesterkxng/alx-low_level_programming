@@ -19,11 +19,13 @@ char *_strdup(char *str)
 
 	i = 0;
 
-	n = _strlen(str);
-
 	if (str == NULL)
 	{
 		return (NULL);
+	}
+	else
+	{
+		n = _strlen(str);
 	}
 	p_2_c = (char *)malloc(sizeof(char) * (n + 1));
 
