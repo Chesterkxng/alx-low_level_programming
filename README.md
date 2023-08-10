@@ -10,3 +10,4 @@ This repository is used for pushing files necessary to validate the courses:
 - 0x08. C - Recursion
 - 0x09. C - Static libraries
 - 0x0B. C - malloc, free
+- 0x0C. C - More malloc, free
