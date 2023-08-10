@@ -22,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n2 = _strlen(s2);
 	if (n > n2)
 		n = n2;
-       	concat = malloc(sizeof(char) * (n1 + n + 1));
+	concat = malloc(sizeof(char) * (n1 + n + 1));
 	if (concat == NULL)
 		return (NULL);
 	for (i = 0; i < n1; i++)
@@ -34,7 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 }
 /**
  * _strlen - Entry point
- * Description:  a program that return the length of a given
+ * Description:	 a program that return the length of a given
  * char
  * @s: given char
  * Return: the number of characters
