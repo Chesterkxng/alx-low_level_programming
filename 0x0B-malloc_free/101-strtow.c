@@ -19,11 +19,11 @@ char **strtow(char *str)
 	i = 0;
 	j = 0;
 
-	if (str == NULL || str = "")
+	if (!str)
 		return (NULL);
 	string = (char *)malloc(sizeof(char *));
 
-	if (str == NULL)
+	if (!string)
 		return NULL;
 	while (i <= _strlen(str))
 	{
@@ -45,13 +45,13 @@ char **strtow(char *str)
 		i++;
 	}
 	j = 0;
-	for (i = 0; l = 0; i <= k; i++)
+	for (i = 0, l = 0; i <= k; i++)
 	{
-		for (j = 0; str[j] != " "; j++; l++)
+		for (j = 0; str[j] != " "; j++, l++)
 			string[i][j] = str[l];
-		string[i][j + 1] = '\0';
+		string[i][j] = '\0';
+		string[i][j + 1] = '\n';
 	}
-	
 }
 /**
  * _strlen - Entry point
@@ -68,4 +68,30 @@ int _strlen(char *s)
 	while (s[count] != '\0')
 		count++;
 	return (count);
+}
+/**
+ * numofwords - entry point
+ * Description: counting number of word in a sentence
+ * @s: pointer to char
+ * Return: int
+ */
+int numofwords(char *s)
+{
+	int num, low, i;
+
+	low = 0;
+	num = 0;
+	i = 0;
+	while (i <= _strlen(s))
+	{
+		while (s[i] != " ")
+			low++;
+		if (low != 0)
+		{
+			num++;
+			low = 0;
+		}
+		i++;
+	}
+	return (num);
 }
