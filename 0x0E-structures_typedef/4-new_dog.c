@@ -18,6 +18,31 @@ int _strlen(char *s)
 	return (count);
 }
 /**
+ * *_strcpy - Entry point
+ * followed by a new line.
+ * @dest : destination
+ * @src : source
+ * Return: char
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	i = 0;
+
+	while (*(src + i) != '\0')
+	{
+		*(dest + i) = *(src + i);
+
+		i++;
+	}
+
+	*(dest + i) = '\0';
+
+	return (dest);
+}
+/**
  * *new_dog - Function that point to a new dog
  * @name : name
  * @age: age
@@ -26,25 +51,26 @@ int _strlen(char *s)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *namecpy, *ownercpy;
 	dog_t *new_dog;
-	int i, j;
 
-	namecpy = malloc(sizeof(char) * (_strlen(name) + 1));
-	ownercpy = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (namecpy == NULL || owner == NULL)
-		return (NULL);
-	for (i = 0; i < _strlen(name); i++)
-		namecpy[i] = name[i];
-	namecpy[i] = '\0';
-	for (j = 0; j < _strlen(owner); j++)
-		ownercpy[j] = owner[j];
-	ownercpy[j] = '\0';
-		new_dog = malloc(sizeof(dog_t));
+	new_dog = malloc(sizeof(dog_t));
 	if (!new_dog)
 		return (NULL);
-	new_dog->name = name;
+	new_dog->name = (char *)malloc(sizeof(char) * (_strlen(name) + 1));
+	if (!(*new_dog).name)
+	{
+		free(new_dog);
+		return (NULL);
+	}
+	_strcpy(new_dog->name, name);
+	new_dog->owner = (char *)malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (!(*new_dog).owner)
+	{
+		free(new_dog->name);
+		free(new_dog);
+		return (NULL);
+	}
+	_strcpy(new_dog->owner, owner);
 	new_dog->age = age;
-	new_dog->owner = owner;
 	return (new_dog);
 }
