@@ -23,7 +23,7 @@ char **strtow(char *str)
 	j = 0;
 	now = numofwords(str);
 
-	if (!str)
+	if (str == NULL || now == 0 || _strlen(str) == 0)
 		return (NULL);
 	string = malloc(sizeof(char *) * (now + 1));
 
