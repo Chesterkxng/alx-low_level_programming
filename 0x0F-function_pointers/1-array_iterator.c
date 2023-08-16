@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stddef.h>
 /**
- * print_name - a pointer to function that print
+ * array_iterator - a pointer to function that print
  * the elements of an array
  * @array: given array
  * @size: size of array
