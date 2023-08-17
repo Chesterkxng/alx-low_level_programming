@@ -1,6 +1,6 @@
 #include "3-calc.h"
 #include <stdlib.h>
-#include <stdio.h>
+#include <stddef.h>
 /**
  * get_op_func - get the right function depending
  * on a given char
