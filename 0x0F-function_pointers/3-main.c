@@ -4,16 +4,16 @@
 #include <string.h>
 /**
  * main - entry point
+ * Description: program that do things
  * @argc: num of arguments
  * @argv: array of arguments
- * Return: int
+ * Return: 0 success
  */
 int main(int argc, char *argv[])
 {
 	int num1, num2;
 	char *operator;
 
-	/* Error if arguments are not 4 with the executable */
 	if (argc != 4)
 	{
 		printf("Error\n");
