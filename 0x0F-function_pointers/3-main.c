@@ -10,22 +10,31 @@
  */
 int main(int argc, char *argv[])
 {
+	int num1, num2;
+	char *operator;
+
+	/* Error if arguments are not 4 with the executable */
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if ((*get_op_func)(argv[2]) == NULL || argv[2][1] != '\0')
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	operator = argv[2];
+
+	if (get_op_func(operator) == NULL || operator[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((*argv[2] == 47 || *argv[2] == 37) && atoi(argv[3]) == 0)
+	if ((*operator == 47 || *operator == 37) && num2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n",
-		       get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
+
+	printf("%d\n", get_op_func(operator)(num1, num2));
 	return (0);
 }
