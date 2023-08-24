@@ -8,16 +8,20 @@
  * an element of a list_t list
  * @head: pointer to pointer
  * @str: string
- * Return: size_t
+ * Return: list_t
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	char *strdp = strdup(str);
-	int size = strlen(strdp);
+	char *strdp;
+	int size;
 	list_t *new_node = malloc(sizeof(list_t));
 
-	if (str == NULL || new_node == NULL)
+	if (str == NULL)
 		return (NULL);
+	if (new_node == NULL)
+		return (NULL);
+	strdp = strdup(str);
+	size = strlen(str);
 	if (strdp == NULL)
 	{
 		free(new_node);
