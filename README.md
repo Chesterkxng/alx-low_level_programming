@@ -16,3 +16,4 @@ This repository is used for pushing files necessary to validate the courses:
 - 0x0F. C - Function pointers
 - 0x10. C - Variadic functions
 - 0x12. C - Singly linked lists
+- 0x13. C - More singly linked lists
