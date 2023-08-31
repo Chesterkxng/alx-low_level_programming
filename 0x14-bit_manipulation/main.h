@@ -8,4 +8,5 @@ int _putchar(char c);
 unsigned int _strlen(const char *s);
 unsigned int power(unsigned int n, unsigned int expo);
 unsigned int binary_to_uint(const char *b);
+void print_binary(unsigned long int n);
 #endif
