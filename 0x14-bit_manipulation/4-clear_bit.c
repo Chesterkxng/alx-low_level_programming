@@ -19,7 +19,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		*n = *n & ~mask;
 		return (1);
 	}
-	return (-1);
+	return (1);
 }
 /**
  * get_bit - get the bit at the given index
