@@ -1,7 +1,7 @@
 #include "main.h"
 int _strlen(char *s);
 /**
- * create_file - a function that create a file
+ * append_text_to_file - a function that create a file
  * @filename : file name
  * @text_content: text to add int the file
  * Return: integer
