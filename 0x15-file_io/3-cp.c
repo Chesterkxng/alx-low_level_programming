@@ -46,10 +46,10 @@ int copy_file(char *src_filename, char *dest_filename)
 
 	fp_src = open(src_filename, O_RDONLY);
 	if (fp_src < 0)
-		failure("Error: Can't read from file ", src_filename, 98);
+		failure("Error: Can't read from file", src_filename, 98);
 	fp_dest = open(dest_filename, O_RDWR | O_CREAT | O_TRUNC, 0664);
 	if (fp_dest < 0)
-		failure("Error: Can't write to ", dest_filename, 99);
+		failure("Error: Can't write to", dest_filename, 99);
 	len_src = read(fp_src, buffer, SIZE);
 	if (len_src > 0)
 	{
@@ -58,19 +58,19 @@ int copy_file(char *src_filename, char *dest_filename)
 		{
 			close(fp_dest);
 			close(fp_src);
-			failure("Error: Can't write to ", dest_filename, 99);
+			failure("Error: Can't write to", dest_filename, 99);
 		}
 	}
 	if (len_src == -1)
 	{
 		close(fp_dest);
 		close(fp_src);
-		failure("Error: Can't read from file ", src_filename, 98);
+		failure("Error: Can't read from file", src_filename, 98);
 	}
 	if (close(fp_dest) == -1)
-		failure("Error: Can't close fd ", dest_filename, 100);
+		failure("Error: Can't close fd", dest_filename, 100);
 	if (close(fp_src) == -1)
-		failure("Error: Can't close fd ", src_filename, 100);
+		failure("Error: Can't close fd", src_filename, 100);
 	return (1);
 }
 /**
