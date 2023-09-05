@@ -57,7 +57,7 @@ int copy_file(char *src_filename, char *dest_filename)
 	if (len_src > 0)
 	{
 		len_dest = write(fp_dest, buffer, len_src);
-		if (len_dest == -1 && len_dest != len_src)
+		if (len_dest != len_src)
 		{
 			close(fp_dest);
 			close(fp_src);
