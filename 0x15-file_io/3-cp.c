@@ -85,7 +85,7 @@ int copy_file(char *src_filename, char *dest_filename)
 int main(int argc, char **argv)
 {
 	if (argc != 3)
-		failure("Usage: ", "cp file_from file_to", 97);
+		failure("Usage:", "cp file_from file_to", 97);
 	copy_file(argv[1], argv[2]);
 	return (0);
 }
