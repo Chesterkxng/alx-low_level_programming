@@ -47,14 +47,14 @@ int copy_file(char *src_filename, char *dest_filename)
 	fp_src = open(src_filename, O_RDONLY);
 	if (fp_src < 0)
 		failure("Error: Can't read from file", src_filename, 98);
-	fp_dest = open(dest_filename, O_RDWR | O_CREAT | O_TRUNC, 0664);
+	fp_dest = open(dest_filename, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fp_dest < 0)
 		failure("Error: Can't write to", dest_filename, 99);
 	len_src = read(fp_src, buffer, SIZE);
 	if (len_src > 0)
 	{
 		len_dest = write(fp_dest, buffer, len_src);
-		if (len_dest == -1 || len_dest != len_src)
+		if (len_dest == -1 && len_dest != len_src)
 		{
 			close(fp_dest);
 			close(fp_src);
