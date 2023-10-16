@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  * *_strchr - Entry point
  * Description: function copies n bytes from memory area

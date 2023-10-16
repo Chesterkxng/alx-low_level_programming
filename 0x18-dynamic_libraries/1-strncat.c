@@ -1,15 +1,15 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * *_strcat - Entry point.
+ * *_strncat - Entry point.
  * Description: a function that concatenates two strings
  * @dest : destination
  * @src : source
+ * @n : integer
  *
- * Return: the concatenated dest.
+ * Return: the desired dest.
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i, j, k;
 
@@ -19,7 +19,11 @@ char *_strcat(char *dest, char *src)
 
 	j = _strlen(src);
 
-	while (k <= j)
+	if (n > j)
+	{
+		n = j;
+	}
+	while (k < n)
 	{
 		dest[i + k] = src[k];
 		k++;
