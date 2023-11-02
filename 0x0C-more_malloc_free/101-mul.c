@@ -22,9 +22,9 @@ int _isnumber(char *c)
  * Return: integer.
  */
 
-int _atoi(char *s)
+long int _atoi(char *s)
 {
-	int i, k, num, j;
+	long int i, k, num, j;
 
 	i = 0;
 	k = 0;
@@ -57,41 +57,38 @@ int _atoi(char *s)
 	return (num);
 }
 /**
- * print_number - Entry point
- * Description: a program that prints an integer
- * @n : integer
- * Return: void
+ * itoa - converts an integer to a string
+ *
+ * @n: number to convert
+ *
+ * @buffer: buffer to store the converted number
+ *
+ * Return: the converted number is string
  */
-void print_number(int n)
+char *itoa(long int n, char *buffer)
 {
+	if (n / 10 != 0)
+		buffer = itoa(n / 10, buffer);
 
-	if (n < 0)
-	{
-		_putchar(45);
-		if (-n / 10 > 0)
-		{
-			print_number(-n / 10);
-		}
-		_putchar(-(n % 10) + 48);
-	}
-	else
-	{
-		if (n / 10 > 0)
-		{
-			print_number(n / 10);
-		}
-		_putchar(n % 10 + 48);
-	}
+	*buffer = n % 10 + '0';
+	buffer++;
+
+	return (buffer);
 }
 /**
- * print_error - just to print error
- * Return: void
+ * _strlen - Entry point
+ * Description:  a program that return the length of a given
+ * char
+ * @s: given char
+ * Return: the number of characters
  */
-void print_error(void)
+int _strlen(char *s)
 {
-	char *error = "Error\n";
+	int count = 0;
 
-	write(1, error, 6);
+	while (s && s[count] != '\0')
+		count++;
+	return (count);
 }
 /**
  * main - Entry point
@@ -101,23 +98,24 @@ void print_error(void)
  */
 int main(int argc, char *argv[])
 {
-	int is_num1, is_num2, a, b;
+	int is_num1, is_num2;
+	char *error = "Error\n";
+	char buffer[1024] = {0};
 
 	if (argc != 3)
 	{
-		print_error();
+		write(1, error, _strlen(error));
 		exit(98);
 	}
 	is_num1 = _isnumber(argv[1]);
 	is_num2 = _isnumber(argv[2]);
 	if (is_num1 == 0 || is_num2 == 0)
 	{
-		print_error();
+		write(1, error, _strlen(error));
 		exit(98);
 	}
-	a = _atoi(argv[1]);
-	b = _atoi(argv[2]);
-	print_number(a * b);
+	itoa(_atoi(argv[1]) * _atoi(argv[2]), buffer);
+	write(1, buffer, _strlen(buffer));
 	_putchar('\n');
 	return (0);
 }

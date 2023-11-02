@@ -11,7 +11,8 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int _isnumber(char *c);
-int _atoi(char *s);
-void print_error(void);
-void print_number(int n);
+long int _atoi(char *s);
+void print_number(long int n);
+int _strlen(char *s);
+char *itoa(long int n, char *buffer);
 #endif
