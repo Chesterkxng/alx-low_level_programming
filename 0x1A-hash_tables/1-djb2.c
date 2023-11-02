@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 /**
- * hash_djib2 - jib2 algo
+ * hash_djb2 - jib2 algo
  * @str :  string to hash
  * Return: hash value
  */
