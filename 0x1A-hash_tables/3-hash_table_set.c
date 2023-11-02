@@ -8,27 +8,23 @@
 hash_node_t *node_init(const char *key, const char *value)
 {
 	hash_node_t *new_node;
-	char *key_cpy, *value_cpy;
 
 	new_node = malloc(sizeof(hash_node_t));
 	if (!new_node)
 		return (NULL);
-	if (strcmp(key, "") == 0 || strcmp(value, "") == 0)
+	new_node->key = strdup(key);
+	if (!(new_node->key))
 	{
 		free(new_node);
 		return (NULL);
 	}
-	key_cpy = strdup(key);
-	value_cpy = strdup(value);
-	if (!key_cpy || !value_cpy)
+	new_node->value = strdup(value);
+	if (!(new_node->value))
 	{
+		free(new_node->key);
 		free(new_node);
 		return (NULL);
 	}
-	new_node->key = key_cpy;
-	new_node->value = value_cpy;
-	free(key_cpy);
-	free(value_cpy);
 	return (new_node);
 }
 /**
@@ -43,7 +39,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_node, *cursor;
 	unsigned long int index;
 
-	if (!ht || strcmp(key, "") == 0 || strcmp(value, "") == 0)
+	if (!ht || strcmp(key, "") == 0)
 		return (0);
 	index = key_index((unsigned char *)key, ht->size);
 	cursor = ht->array[index];
