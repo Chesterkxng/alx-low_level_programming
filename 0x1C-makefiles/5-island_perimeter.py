@@ -3,6 +3,7 @@
  function that computer perimeter of island
 """
 def island_perimeter(grid):
+        """ return the perimeter of island """
         m = len(grid)
         n = len(grid[0])
         perimeter = 0
