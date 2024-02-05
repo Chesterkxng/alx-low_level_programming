@@ -1,7 +1,7 @@
 #include "search_algos.h"
 #include <math.h>
 /**
- * binary_search - linear search method
+ * binary_search - binary search method
  * @array: given array
  * @size: array's size
  * @value: searched value
