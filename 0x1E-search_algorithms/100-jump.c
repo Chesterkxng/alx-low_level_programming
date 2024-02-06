@@ -14,7 +14,7 @@ int jump_search(int *array, size_t size, int value)
 
 	if (!array || size == 0)
 		return (-1);
-	step = sqrt(size);
+	step = floor(sqrt(size));
 	while (status == 1)
 	{
 		printf("Value checked array[%ld] = [%d]\n", idx, array[idx]);
