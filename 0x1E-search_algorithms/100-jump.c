@@ -12,7 +12,7 @@ int jump_search(int *array, size_t size, int value)
 	size_t step, idx = 0;
 	int status = 1;
 
-	if (!array || size == 0)
+	if (!array || size == 0 || value < array[0])
 		return (-1);
 	step = floor(sqrt(size));
 	while (status == 1)
