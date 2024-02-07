@@ -3,7 +3,8 @@
 /**
  * _binary_search - binary search method
  * @array: given array
- * @size: array's size
+ * @left: left born
+ * @right: right born
  * @value: searched value
  * Return: the index of the first occurence
  */
