@@ -39,7 +39,7 @@ working in the C programming language. The specific list of projects contained f
 
 ## Author✍️
 
-* **[GOITA CHEICK](https://twitter.com/chester_kg)** <[Aysuarex](https://github.com/Chesterkxng)>
+* **[GOITA CHEICK](https://twitter.com/chester_kg)** <[Chesterking](https://github.com/Chesterkxng)>
 
 ## Acknowledgements🙏
 
