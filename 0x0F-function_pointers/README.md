@@ -1,36 +1,67 @@
-Resources
-Read or watch:
+# C - Function pointers
 
-Function Pointer in C
-Pointers to functions
-Function Pointers in C / C++
-why pointers to functions?
-Everything you need to know about pointers in C
-Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+In this project, I learned about function pointers in C - what they hold,
+where they point in virtual memory, and how to use them.
 
-General
-What are function pointers and how to use them
-What does a function pointer exactly hold
-Where does a function pointer point to in the virtual memory
-Copyright - Plagiarism
-You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
-You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
-You are not allowed to publish any content of this project.
-Any form of plagiarism is strictly forbidden and will result in removal from the program.
-Requirements
-General
-Allowed editors: vi, vim, emacs
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-All your files should end with a new line
-A README.md file, at the root of the folder of the project is mandatory
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-You are not allowed to use global variables
-No more than 5 functions per file
-The only C standard library functions allowed are malloc, free and exit. Any use of functions like printf, puts, calloc, realloc etc… is forbidden
-You are allowed to use _putchar
-You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called function_pointers.h
-Don’t forget to push your header file
-All your header files should be include guarded
+## Header Files :file_folder:
+
+* [function_pointers.h](./function_pointers.h): Header file containing prototypes
+for all functions written for programs 0-2 of the project.
+
+| File                 | Prototype                                                            |
+| -------------------- | -------------------------------------------------------------------- |
+| `0-print_name.c`     | `void print_name(char *name, void (*f)(char *));`                    |
+| `1-array_iterator.c` | `void array_iterator(int *array, size_t size, void (*action)(int));` |
+| `2-int_index.c`      | `int int_index(int *array, int size, int (*cmp)(int));`              |
+
+* [3-calc.h](./3-calc.h): Header file containing definitions and prototypes for all
+types and function written for the program [3-main.c](./3-main.c).
+
+| Type/File          | Definition/Prototypes                                        |
+| ------------------ | ------------------------------------------------------------ |
+| `struct op`        | <ul><li>`char *op`</li><li>`int (*f)(int a, int b)`</li><ul> |
+| `typedef op_t`     | `struct op`                                                  |
+| `3-op_functions.c` | <ul><li>`int op_add(int a, int b);`</li><li>`int op_sub(int a, int b);`</li><li>`int op_mul(int a, int b);`</li><li>`int op_div(int a, int b);`</li><li>`int op_mod(int a, int b);`</li></ul>                                            |
+| `3-get_op_func.c`  | `int (*get_op_func(char *s))(int, int);`                     |
+
+## Tasks :page_with_curl:
+
+* **0. What's my name**
+  * [0-print_name.c](./0-print_name.c): C function that prints a name.
+
+* **1. If you spend too much time thinking about a thing, you'll never get it done**
+  * [1-array_iterator.c](./1-array_iterator.c): C function that executes a function given
+  as a parameter on each element of an array.
+
+* **2. To hell with circumstances; I create opportunities**
+  * [2-int_index.c](./2-int_index.c): C function that searches for an integer.
+    * Returns the index of the first element for which the `cmp` function does not return `0`.
+    * If no element is matched or `size` <= 0, the function returns `-1`.
+
+* **3. A goal is not always meant to be reached, it often serves simply as something to aim at**
+  * [3-op_functions.c](./3-op_functions.c): File containing the following five functions:
+    * `op_add`: Returns the sum of `a` and `b`.
+    * `op_sub`: Returns the difference of `a` and `b`.
+    * `op_mul`: Returns the product of `a` and `b`.
+    * `op_div`: Returns the division of `a` by `b`.
+    * `op_mod`: Returns the remainder of the division of `a` by `b`.
+
+  * [3-get_op_func.c](./3-get_op_func.c): C function that selects the correct function
+  from `3-op_functions.c` to perform the operation asked by the user.
+    * If the operator argument `s` does not match any of the five expected operators
+    (`+`, `-`, `*`, `/`, `%`), the function returns `NULL`.
+
+  * [3-main.c](./3-main.c): C program that performs simple mathematical operations.
+    * Prints the result of the operation, followed by a new line.
+    * Usage `./a.out num1 operator num2`
+    * The program assumes `num1` and `num2` are integers that can be converted from string
+    input to `int` using `atoi`.
+    * The program assumes that the result of all operations can be stored in an `int`.
+    * `operator` is one of either `+` (addition), `-` (subtraction), `*`
+    (multiplication), `/` (division), or `%` (modulo).
+    * If the number of arguments is incorrect, the program prints `Error` followed by a new
+    line and exits with a status value of `98`.
+    * If the `operator` is none of the above, the program prints `Error` followed by
+    a new line and exits with a status value of `99`.
+    * If the user tries to divide (`/` or `%`) by `0`, the program prints
+    `Error` followed by a new line and exits with a status value of `100`.
