@@ -2,10 +2,6 @@
 
 In this project, I learned about using doubly-linked lists in C.
 
-## Tests :heavy_check_mark:
-
-* [tests](./tests): Folder of test files. Provided by ALX.
-
 ## Header File :file_folder:
 
 * [lists.h](./lists.h): Header file containing definitions and prototypes for all types
