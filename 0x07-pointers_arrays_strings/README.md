@@ -1,34 +1,66 @@
-Resources
-Read or watch:
+# C - Even more pointers, arrays and strings
 
-C - Pointer to Pointer
-C – Pointer to Pointer with example
-Multi-dimensional Arrays in C
-Two dimensional (2D) arrays in C programming with example
-Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+In this project, I learned about what and how to use pointers to pointers
+and multidimensional arrays in C as well as the most common C standard library
+functions to manipulate strings.
 
-General
-What are pointers to pointers and how to use them
-What are multidimensional arrays and how to use them
-What are the most common C standard library functions to manipulate strings
-Copyright - Plagiarism
-You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
-You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
-You are not allowed to publish any content of this project.
-Any form of plagiarism is strictly forbidden and will result in removal from the program.
-Requirements
-General
-Allowed editors: vi, vim, emacs
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-All your files should end with a new line
-A README.md file, at the root of the folder of the project is mandatory
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-You are not allowed to use global variables
-No more than 5 functions per file
-You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden
-You are allowed to use _putchar
-You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called main.h
-Don’t forget to push your header file
+## Header File :file_folder:
+
+* [main.h](./main.h): Header file containing prototypes for all functions written
+in the project.
+
+| File         | Prototype                                               |
+| ------------ | ------------------------------------------------------- |
+| `0-memset.c` | `char *_memset(char *s, char b, unsigned int n);`       |
+| `1-memcpy.c` | `char *_memcpy(char *dest, char *src, unsigned int n);` |
+| `2-strchr.c` | `char *_strchr(char *s, char c);`                       |
+| `3-strspn.c` | `unsigned int _strspn(char *s, char *accept);`          |
+| `4-strpbrk.c` | `char *_strpbrk(char *s, char *accept);`               |
+| `5-strstr.c` | `char *_strstr(char *haystack, char *needle);`          |
+| `7-print_chessboard.c` | `void print_chessboard(char (*a)[8]);`        |
+| `8-print_diagsums.c` | `void print_diagsums(int *a, int size);`        |
+| `100-set_string.c` | `void set_string(char **s, char *to);`              |
+
+## Tasks :page_with_curl:
+
+* **0. memset**
+  * [0-memset.c](./0-memset.c): C function that fills the first `n` bytes of
+  memory area pointed to by `s` with the constant byte `b`.
+    * Returns a pointer to the filled memory area `s`.
+
+* **1. memcpy**
+  * [1-memcpy.c](./1-memcpy.c): C function that copies `n` bytes from memory
+  area `src` to memory area `dest`.
+    * Returns a pointer to the memory area `dest`.
+
+* **2. strchr**
+  * [2-strchr.c](./2-strchr.c): C function that returns a pointer to the first occurence of
+  the character `c` in the string `s`.
+    * If the character is not found, the function returns `NULL`.
+
+* **3. strspn**
+  * [3-strspn.c](./3-strspn.c): C function that returns the number of bytes in the intitial
+  segment of memory area `s` which consist only of bytes from a substring `accept`.
+
+* **4. strpbrk**
+  * [4-strpbrk.c](./4-strpbrk.c): C function that locates the first occurence in a
+  string `s` of any of the bytes in a string `accept`.
+    * Returns a pointer to the byte in `s` that matches one of the bytes in `accept`.
+    * If no matching byte is found, the function returns `NULL`.
+
+* **5. strstr**
+  * [5-strstr.c](./5-strstr.c): C function that finds the first occurence of a
+  substring `needle` in a string `haystack`.
+    * The terminating null bytes (`\0`) are not compared.
+    * Returns a pointer to the beginning of the located substring.
+    * If the substring is not found, the function returns `NULL`.
+
+* **6. Chess is mental torture**
+  * [7-print_chessboard.c](./7-print_chessboard.c): C function that prints the chessboard.
+
+* **7. The line of life is a ragged diagonal between duty and desire**
+  * [8-print_diagsums.c](./8-print_diagsums.c): C function that prints the sum of the two
+  diagonals of a square matrix of integers.
+
+* **8. Double pointer, double fun**
+  * [100-set_string.c](./100-set_string.c): C function that sets the value of a pointer to a char.
