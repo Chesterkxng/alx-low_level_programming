@@ -1,38 +1,59 @@
-Resources
-Read or watch:
+# C - Recursion
 
-0x08. Recursion, introduction
-What on Earth is Recursion?
-C - Recursion
-C Programming Tutorial 85, Recursion pt.1
-C Programming Tutorial 86, Recursion pt.2
-Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+In this project, I learned about recursion in C.
 
-General
-What is recursion
-How to implement recursion
-In what situations you should implement recursion
-In what situations you shouldn’t implement recursion
-Copyright - Plagiarism
-You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
-You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
-You are not allowed to publish any content of this project.
-Any form of plagiarism is strictly forbidden and will result in removal from the program.
-Requirements
-General
-Allowed editors: vi, vim, emacs
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-All your files should end with a new line
-A README.md file, at the root of the folder of the project is mandatory
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-You are not allowed to use global variables
-No more than 5 functions per file
-You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden
-You are allowed to use _putchar
-You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called main.h
-Don’t forget to push your header file
-You are not allowed to use any kind of loops
-You are not allowed to use static variables
+## Header File :file_folder:
+
+* [main.h](./main.h): Header file containing prototypes for all
+functions written in the project.
+
+| File                      | Prototype                             |
+| ------------------------- | ------------------------------------- |
+| `0-puts_recursion.c`      | `void _puts_recursion(char *s);`      |
+| `1-print_rev_recursion.c` | `void _print_rev_recursion(char *s);` |
+| `2-strlen_recursion.c`    | `int _strlen_recursion(char *s);`     |
+| `3-factorial.c`           | `int factorial(int n);`               |
+| `4-pow_recursion.c`       | `int _pow_recursion(int x, int y);`   |
+| `5-sqrt_recursion.c`      | `int _sqrt_recursion(int n);`         |
+| `6-is_prime_number.c`     | `int is_prime_number(int n);`         |
+| `7-is_palindrome.c`       | `int is_palindrome(char *s);`         |
+
+## Tasks :page_with_curl:
+
+* **0. She locked away a secret, deep inside herself, something she once knew to be true... but chose to forget**
+  * [0-puts_recursion.c](./0-puts_recursion.c): C function that prints a string,
+  followed by a new line.
+
+* **1. Why is it so important to dream? Because, in my dreams we are together**
+  * [1-print_rev_recursion.c](./1-print_rev_recursion.c): C function that prints
+  a string in reverse.
+
+* **2. Dreams feel real while we're in them. It's only when we wake up that we realize something was actually strange**
+  * [2-strlen_recursion.c](./2-strlen_recursion.c): C function that returns the
+  length of a string.
+
+* **3. You mustn't be afraid to dream a little bigger, darling**
+  * [3-factorial.c](./3-factorial.c): C function that returns the factorial of
+  a given number.
+
+* **4. Once an idea has taken hold of the brain it's almost impossible to eradicate**
+  * [4-pow_recursion.c](./4-pow_recursion.c): C function that returns the value of
+  a number `x` raised to the value of an input `y`.
+    * If `y` is less than `0`, the function returns `-1`.
+
+* **5. Your subconscious is looking for the dreamer**
+  * [5-sqrt_recursion.c](./5-sqrt_recursion.c): C function that returns the natural square
+  root of a number.
+    * If the number does not have a natural square root, the function returns `-1`.
+
+* **6. Inception. Is it possible?**
+  * [6-is_prime_number.c](./6-is_prime_number.c): C function that checks in an
+  integer is a prime number.
+    * If the integer is prime, the function returns `1`.
+    * Otherwise, the function returns `0`.
+
+* **7. They say we only use a fraction of our brain's true potential. Now that's when we're awake. When we're asleep, we can do almost anything**
+  * [100-is_palindrome.c](./100-is_palindrome.c): C function that checks if a string is
+  a palindrome.
+    * If the string is a palindrome, the function returns `1`.
+    * Otherwise, the function returns `0`.
